@@ -1,0 +1,12 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\spi.o"
+".\objects\max7219.o"
+".\objects\systick_time.o"
+".\objects\loop.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+--strict --scatter ".\Objects\max72219.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\max72219.map" -o .\Objects\max72219.axf
